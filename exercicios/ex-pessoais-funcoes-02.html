@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digite o nome de um jogador</h1>
+    <input type="text" name="nome" id="nome">
+    <input type="button" value="clique aqui" onclick="result()">
+    <div id="resultado">RESULTADO</div>
+
+<script>
+    function result() {
+        var jogador = window.document.getElementById('nome')
+        var j1 = String(nome.value)
+        resultado.innerHTML = `O jogador que você digitou chama-se ${j1}`
+    }
+</script>
+
+</body>
+</html>

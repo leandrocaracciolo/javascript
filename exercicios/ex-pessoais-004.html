@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            var n1 = Number(window.prompt('Insert a number, please'));
+            var n2 = Number(window.prompt('Insert another number, please'));
+            var result = n1 + n2;
+            var mult = result * 30;
+            document.write(`O resultado é ${result}, multiplicado por 30 é ${mult}`);
+        */
+        var a = Number(window.prompt('Digite aqui o quanto você quer ganhar'))
+        var b = a.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        document.write('Seu salário vai ser ' + b )
+
+    </script>
+</body>
+</html>

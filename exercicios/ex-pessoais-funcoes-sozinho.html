@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Aqui vamos tentar uma nova soma!</h1>
+<input type="number" id="num1" name="num1">
+<input type="number" id="num2" name="num2">
+<input type="button" value="SOMAR" onclick="soma()">
+<div id="resultado">RESULTADO</div>
+
+<script>
+
+window.alert('Atenção que aí vem uma soma!')
+
+    function soma() {
+    var valor1 = window.document.getElementById('num1')
+    var valor2 = window.document.getElementById('num2')
+    var n1 = Number(valor1.value)
+    var n2 = Number(valor2.value)
+    var sominha = n1 + n2
+    resultado.innerHTML= `O resultado entre ${n1} e ${n2} é de ${sominha}`
+    }
+
+</script>
+
+</body>
+</html>
