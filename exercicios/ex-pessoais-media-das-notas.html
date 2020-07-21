@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: arial;}
+        input {font-size: 20px;}
+        .camponotas {width: 50px;}
+    </style>
+</head>
+<body>
+    <h1>Notas do semestre - Cálculo da média</h1>
+    <h2>O aluno passará de ano se sua média for igual ou superior a 6</h2>
+    <table>
+        <tr>
+            <td>Matéria</td>
+            <td>1 Sem</td>
+            <td>2 Sem</td>
+            <td>3 Sem</td>
+            <td>4 Sem</td>
+            <td>Média final</td>
+        </tr>
+        <tr>
+            <td>Mat</td>
+            <td><input type="number" name="1b" id="1b" class="camponotas"></td>
+            <td><input type="number" name="2b" id="2b" class="camponotas"></td>
+            <td><input type="number" name="3b" id="3b" class="camponotas"></td>
+            <td><input type="number" name="4b" id="4b" class="camponotas"></td>
+            <td><div id="res"></div></td>
+        </tr>
+</table>
+<p><input type="button" value="Calcular média"  onclick="calcular()"></p>
+
+<div id="comentario"></div>
+
+<script>
+    function calcular() {
+        var n1 = window.document.getElementById('1b') 
+        var nota01 = Number(n1.value)
+        var n2 = window.document.getElementById('2b') 
+        var nota02 = Number(n2.value)
+        var n3 = window.document.getElementById('3b') 
+        var nota03 = Number(n3.value)
+        var n4 = window.document.getElementById('4b') 
+        var nota04 = Number(n4.value)
+        var soma = (nota01 + nota02 + nota03 + nota04) / 4
+        res.innerHTML = `A média das notas é <strong>${soma}</strong>.`
+        if (soma >= 6) {
+            comentario.innerHTML = '<h1>O aluno foi aprovado! Parabéns!</h1>'
+        } else {
+            comentario.innerHTML = '<h1>O aluno foi reprovado.</h1>'
+            
+        }
+    }
+</script>
+
+</body>
+</html>
