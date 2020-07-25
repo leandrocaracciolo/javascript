@@ -21,7 +21,17 @@
         }
         body{
             font: normal 14pt arial;
+            background-color: rgb(77, 112, 187);
         }
+
+form{padding-left: 40px;}
+
+        input,
+        textarea{
+            padding: 5px;
+            width: 400px;
+        }
+        
     </style>
 </head>
 <body>
@@ -29,12 +39,24 @@
         <h1>Meu primeiro formulário</h1>
     </header>
     <section>
-    <h2>Preencha os campos abaixo para enviar uma mensagem</h2>
-    Nome: <input type="text">
-    Email: <input type="email">
-    Mensagem: <textarea name="" id="" cols="30" rows="10"></textarea>
-    <input type="button" value="ENVIAR">
+        <h2>Preencha os campos abaixo para enviar uma mensagem</h2>
+        <form id="contatoForm" method="post" action="mailto:leandrocaracciolo@gmail.com"></form>
+            <p>Nome:</p> <input type="text" id="nomeid"  name="nome" placeholder="Coloque seu nome" required="required">
+           <!-- <p>Email:</p> <input type="email" id="emailid" name="fone" placeholder="Digitye seu email">
+            <p>Mensagem:</p> <textarea name="" id="" cols="30" rows="10" placeholder="Deixe sua mensagem"></textarea>-->
+            <p><input type="submit" onclick="enviar();" value="ENVIAR"></p>
+        </form>
     </section>
     <Footer> <p>&copy; Eu mesmo</p></Footer>
+
+<script>
+    function enviar(){
+        var nome = document.getElementById('nomeid')
+        if (nome.value != "") {
+alert(`Obrigado ${nome.value}, sua mensagem foi enviada com sucesso `)            
+        }
+    }
+</script>
+
 </body>
 </html>
