@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade do Pedro</title>
+</head>
+<body>
+    <h1>Calculadora de idade</h1>
+
+    <h2>Saiba qual vai ser sua idade em qualquer ano deste século </h2>
+
+<p>1) Digite o ano do seu nascimento: <input type="number" name="nascimento" id="nascimento"></p>
+<p>2) Selecione um ano: <select name="select" id="valorselect">
+    <option value="2021" selected>2021</option>
+  </select></p>
+<input type="button" value="DESCOBRIR IDADE" onclick="calculoidade()">
+<p><div id="result">Aqui vem o resultado </div></p>
+<p><div id="teste">Aqui vem o resultado </div></p>
+
+    <script>
+           function calculoidade() {
+                var n = window.document.querySelector('input#nascimento')
+                var anonascimento = Number(n.value)
+                var valordoselect = window.document.getElementById('valorselect')
+                var anoselect = Number(valordoselect.value)                
+                var soma = anoselect - anonascimento 
+                if (anonascimento != 0) {
+                    result.innerHTML = `Você nasceu em ${anonascimento}. Sua idade em ${anoselect} será ${soma}`   
+                }     
+           }
+
+// O objetivo futuro é inserir os valores dinâmicamente no campo select
+
+/*
+var contador = 2020
+           while (contador <= 2099) {
+                document.write(`<h2>Em ${contador}/h2>`)
+                    contador ++
+                }
+
+ */         
+    </script>
+</body>
+</html>
