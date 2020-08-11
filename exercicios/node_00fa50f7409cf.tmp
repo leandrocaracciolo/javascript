@@ -1,0 +1,6 @@
+var i = 17
+
+for ( var cu = i  ; cu <= 20 ; cu + 2 ) {
+    console.log(i)
+}
+
