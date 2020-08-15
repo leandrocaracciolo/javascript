@@ -11,4 +11,7 @@ if (pos == -1) {
  console.log('Desculpe. Valor não encontrado')
 } else {
     console.log(`O valor 8 está na posição ${pos}`)
-}
+} 
+
+
+
