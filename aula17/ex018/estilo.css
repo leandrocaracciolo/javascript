@@ -24,8 +24,8 @@ footer {
     font-style: italic;
 }
 
-select{
+select#flista{
     margin: 5px;
-    width: 200px;
+    width: 150px;
     height: 200px;
 }
